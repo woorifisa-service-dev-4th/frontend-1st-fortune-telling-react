@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
   // if (!isOpen) return null; // 모달이 닫혀 있을 때 아무것도 렌더링하지 않음
 
+
   const copyLink = () => {
     const dummy = document.createElement("textarea");
     dummy.value = window.location.href;
@@ -44,7 +45,7 @@ const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
           </label>
           <button
             onClick={copyLink}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600"
+            className=" w-full bg-purple-600 text-white px-4 py-2 rounded-md shadow hover:bg-purple-700"
           >
             링크 복사하기
           </button>

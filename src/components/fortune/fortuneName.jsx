@@ -3,7 +3,7 @@ import React from 'react'
 export const fortuneName = () => {
   return (
     <div className="mb-6">
-      <label for="name" className="block text-sm font-medium text-gray-700">
+      <label for="name" className="block text-lg font-bold text-gray-700">
         이름
       </label>
       <input

@@ -18,6 +18,28 @@ export default function App() {
 
 
 
+
+
+
+  
+
+  const fetchFortuneData = async (zodiac, year, luck, month, day) => {
+    try {
+      const response = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ zodiac, year, luck, month, day }),
+      });
+      const data = await response.json();
+      setFortuneData(data); // 운세 데이터 저장
+      setError(null);
+    } catch (err) {
+      console.error("운세 데이터를 불러오는 중 오류가 발생했습니다.", err);
+      setError("운세 데이터를 가져오는 중 오류가 발생했습니다.");
+    }
+  };
+
+
     useEffect(() => {
       const fetchFortuneData = async () => {
         try {
@@ -48,7 +70,7 @@ export default function App() {
         </h1>
       </header>
       <section className="max-w-xl m-4 mx-auto">
-      <FortuneHeader/>
+      <FortuneHeader />
         <FortuneBody>
          <FortuneName/>
          <FortuneKind/>
