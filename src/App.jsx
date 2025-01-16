@@ -1,7 +1,22 @@
+import { DefaultLayout } from "./layouts/DefaultLayout";
+import  FortuneHeader  from "./components/fortuneHeader"
+import FortuneBody from "./components/fortuneBody";
+import FortuneName from "./components/fortuneName";
+import FortuneKind from "./components/fortuneKind";
+import FortuneBirth from "./components/fortuneBirth";
+import FortuneButton from "./components/fortuneButton";
+
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <DefaultLayout>
+      <FortuneHeader/>
+      <FortuneBody>
+      <FortuneName/>
+      <FortuneKind/>
+      <FortuneBirth/>
+      <FortuneButton/>
+      </FortuneBody>
+    </DefaultLayout>
   )
 }
