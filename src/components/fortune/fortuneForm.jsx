@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const fortuneForm = ({  isOpen, onClose, zodiac, fortune, imageSrc  }) => {
-  if (!isOpen) return null; // 모달이 닫혀 있을 때 아무것도 렌더링하지 않음
+const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
+  // if (!isOpen) return null; // 모달이 닫혀 있을 때 아무것도 렌더링하지 않음
 
   const copyLink = () => {
     const dummy = document.createElement("textarea");

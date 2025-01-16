@@ -5,7 +5,7 @@ const FortuneButton = ({ onClick }) => {
     <button
       type="button"
       onClick={onClick}
-      className="bg-blue-500 text-white px-6 py-3 rounded-md shadow-lg hover:bg-blue-600"
+      className="w-full bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-600 mt-3"
     >
       운세 확인하러 가기
     </button>

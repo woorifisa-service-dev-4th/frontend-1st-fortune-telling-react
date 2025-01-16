@@ -7,41 +7,41 @@ export const FortuneBirth = () => {
   const days = Array.from({ length: 31 }, (_, i) => i + 1); // 1 ~ 31
 
   return (
-    <form className="flex flex-col gap-4">
-      <label className="text-lg font-bold text-gray-700">생년월일</label>
-      <div className="birth-date flex gap-4">
-        {/* 연도 선택 */}
-        <select name="year" required className="border p-2 rounded">
-          <option value="">년</option>
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
+    <form className="flex flex-col mt-3 ">
+    <label className="text-lg font-bold text-gray-700">생년월일</label>
+    <div className="birth-date flex gap-4">
+      {/* 연도 선택 */}
+      <select name="year" required className=" flex-1 border p-2 rounded">
+        <option value="">년</option>
+        {years.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
+      </select>
 
-        {/* 월 선택 */}
-        <select name="month" required className="border p-2 rounded">
-          <option value="">월</option>
-          {months.map((month) => (
-            <option key={month} value={month}>
-              {month}월
-            </option>
-          ))}
-        </select>
+      {/* 월 선택 */}
+      <select name="month" required className="flex-1 border p-2 rounded">
+        <option value="">월</option>
+        {months.map((month) => (
+          <option key={month} value={month}>
+            {month}월
+          </option>
+        ))}
+      </select>
 
-        {/* 일 선택 */}
-        <select name="day" required className="border p-2 rounded">
-          <option value="">일</option>
-          {days.map((day) => (
-            <option key={day} value={day}>
-              {day}일
-            </option>
-          ))}
-        </select>
-      </div>
-    </form>
-  );
+      {/* 일 선택 */}
+      <select name="day" required className="flex-1 border p-2 rounded">
+        <option value="">일</option>
+        {days.map((day) => (
+          <option key={day} value={day}>
+            {day}일
+          </option>
+        ))}
+      </select>
+    </div>
+  </form>
+);
 };
 
 

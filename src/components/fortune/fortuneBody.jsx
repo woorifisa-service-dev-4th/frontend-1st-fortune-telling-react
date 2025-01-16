@@ -1,31 +1,15 @@
-import React,{useState} from 'react'
-import { createPortal } from 'react-dom';
-import Modal from '../ui/modal'
-import FortuneForm from './fortuneForm';
+import React from "react";
 
-const fortuneBody = ({children}) => {
 
-  
-  const [openModal, open ]=useState(false);
-  
+const FortuneBody = ({ children }) => {
+
+
+
   return (
-    <div className='bg-white rounded-xl shadow-2xl border border-gray-300 p-8 w-full max-w-3xl'> 
+    <div className="bg-white rounded-xl shadow-2xl border border-gray-300 p-8 w-full max-w-3xl">
       {children}
-    
-  {/*modal이 생성되는 위치*/}
-   {openModal && createPortal(
-     <Modal>
-       <FortuneForm onClose={ ()=>open(false)}>
-        New todo
-        </FortuneForm>
-      
-    </Modal>,
-    document.body 
-   )}
+    </div>
+  );
+};
 
-</div>
-
-
-  )
-}
-export default fortuneBody
+export default FortuneBody;
