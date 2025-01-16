@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
+const fortuneForm = ({ onClose, zodiac, fortune, imageSrc }) => {
   // if (!isOpen) return null; // 모달이 닫혀 있을 때 아무것도 렌더링하지 않음
 
   const copyLink = () => {
@@ -29,7 +29,7 @@ const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
         </header>
         <div className="mt-6">
           <label className="block text-lg font-semibold mb-2">나의 운세</label>
-          <div id="result">
+          <div className="" id="result">
             <h2 id="fortune-title" className="text-xl font-bold text-gray-800">
               {zodiac}띠 운세
             </h2>
@@ -38,13 +38,13 @@ const fortuneForm = ({ onClose, zodiac, fortune, imageSrc}) => {
             </p>
           </div>
         </div>
-        <div className="share-section mt-6">
+        <div className="flex-col share-section mt-6">
           <label className="block text-lg font-semibold mb-2">
             친구에게 공유하기
           </label>
           <button
             onClick={copyLink}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600"
+            className=" w-full bg-purple-600 text-white px-4 py-2 rounded-md shadow hover:bg-purple-700"
           >
             링크 복사하기
           </button>
