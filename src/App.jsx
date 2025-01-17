@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import FortuneForm from "./components/fortune/FortuneForm";
 
+
 import mouseImg from "./assets/img/mouse.png";
 import oxImg from "./assets/img/ox.png";
 import tigerImg from "./assets/img/tiger.png";
