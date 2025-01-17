@@ -12,4 +12,5 @@ const FortuneButton = ({ onClick }) => {
   );
 };
 
+
 export default FortuneButton;
