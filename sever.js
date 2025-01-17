@@ -8,15 +8,15 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const app = express();
 const port = 3000;
 
-// app.use(express.static('dist'));
-app.use(cors({
-  origin: 'http://localhost:5173', // React 앱의 주소
-}));
+app.use(express.static('dist'));
+// app.use(cors({
+//   origin: 'http://localhost:5173', // React 앱의 주소
+// }));
 app.use(express.json());
 
-// app.get('/', (_, response) => {
-//   response.sendFile('index.html');
-// });
+app.get('/', (_, response) => {
+  response.sendFile('index.html');
+});
 
 app.post('/chat', async (req, res) => {
   const {
